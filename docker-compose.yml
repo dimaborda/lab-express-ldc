@@ -1,0 +1,26 @@
+version: '3.3'
+
+services:
+  profiles:
+    build:
+      context: profiles
+      dockerfile: Dockerfile
+    environment:
+      - PRODUCTION=false
+    volumes:
+      - ./profiles/src:/usr/src/app/src
+
+  users:
+    build:
+      context: users
+      dockerfile: Dockerfile
+
+  proxy:
+    build:
+      context: proxy
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+    depends_on:
+      - profiles
+      - users
