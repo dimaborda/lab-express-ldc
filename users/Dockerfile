@@ -1,5 +1,5 @@
 # Use an official Node.js runtime as a parent image, based on Alpine Linux
-FROM node:alpine
+FROM node:22.4.0-alpine3.20
 
 # Set the working directory in the container
 WORKDIR /usr/src/app
@@ -14,4 +14,4 @@ RUN npm install
 EXPOSE 3000
 
 # Run the app when the container launches
-CMD ["node", "index.js"]
+CMD ["npm", "start"]

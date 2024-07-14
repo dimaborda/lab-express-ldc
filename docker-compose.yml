@@ -14,16 +14,30 @@ services:
     build:
       context: users
       dockerfile: Dockerfile
+    environment:
+      - PRODUCTION=false
+    volumes:
+      - ./users/src:/usr/src/app/src
+
+  transactions:
+    build:
+      context: transactions
+      dockerfile: Dockerfile
+    environment:
+      - PRODUCTION=false
+    volumes:
+      - ./transactions/src:/usr/src/app/src
 
   proxy:
     build:
       context: proxy
       dockerfile: Dockerfile
     ports:
-      - "80:80"
+      - "81:80"
     depends_on:
       - profiles
       - users
+      - transactions
 
   mongo:
     image: mongo
