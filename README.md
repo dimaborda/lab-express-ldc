@@ -87,7 +87,7 @@ Código de Estado: 200 OK
 ### 3. Obtener un Producto por ID
 
 **Método:** `GET`  
-**URL:** `/products/resources/:id`  
+**URL:** `/products/resources/products/:id`  
 **Descripción:** Obtiene un producto específico por su ID.
 
 Parámetros de URL:
@@ -97,7 +97,7 @@ Parámetros de URL:
 Ejemplo con curl:
 
 ```
-curl -X GET http://localhost/products/resources/64b2c2c2e4b0e8f02d2b3f47
+curl -X GET http://localhost/products/resources/products/64b2c2c2e4b0e8f02d2b3f47
 ```
 
 Respuesta Exitosa:
@@ -118,7 +118,7 @@ Código de Estado: 200 OK
 ### 4. Actualizar un Producto
 
 **Método:** `PUT`  
-**URL:** `/products/resources/:id`  
+**URL:** `/products/resources/products/:id`  
 **Descripción:** Actualiza un producto existente.
 
 Parámetros de URL:
@@ -139,7 +139,7 @@ Cuerpo de la Solicitud:
 Ejemplo con curl:
 
 ```
-curl -X PUT http://localhost/products/resources/64b2c2c2e4b0e8f02d2b3f47 \
+curl -X PUT http://localhost/products/resources/products/64b2c2c2e4b0e8f02d2b3f47 \
 -H "Content-Type: application/json" \
 -d '{
     "name": "Producto Actualizado",
@@ -167,7 +167,7 @@ Código de Estado: 200 OK
 ### 5. Eliminar un Producto
 
 **Método:** `DELETE`  
-**URL:** `/products/resources/:id`  
+**URL:** `/products/resources/products/:id`  
 **Descripción:** Elimina un producto específico por su ID.
 
 Parámetros de URL:
@@ -177,7 +177,7 @@ Parámetros de URL:
 Ejemplo con curl:
 
 ```
-curl -X DELETE http://localhost/products/resources/64b2c2c2e4b0e8f02d2b3f47
+curl -X DELETE http://localhost/products/resources/products/64b2c2c2e4b0e8f02d2b3f47
 ```
 
 Respuesta Exitosa:
