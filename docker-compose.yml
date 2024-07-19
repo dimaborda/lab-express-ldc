@@ -1,4 +1,4 @@
-version: '3.3'
+version: '3.8'
 
 services:
   profiles:
@@ -14,6 +14,19 @@ services:
     build:
       context: users
       dockerfile: Dockerfile
+    environment:
+      - PRODUCTION=false
+    volumes:
+      - ./users/src:/usr/src/app/src
+      
+  products:
+    build:
+      context: products
+      dockerfile: Dockerfile
+    environment:
+      - PRODUCTION=false
+    volumes:
+      - ./products/src:/usr/src/app/src
 
   proxy:
     build:
@@ -24,3 +37,4 @@ services:
     depends_on:
       - profiles
       - users
+      - products

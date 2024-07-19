@@ -2,7 +2,7 @@ const express = require('express')
 const app = express()
 
 app.get('/profiles', function (req, res) {
-    let response = { message : "Welcome to profiles microservice..." }
+    let response = { message : "Welcome to profiles microservice  :XD" }
     res.send({data: response})
   })
   

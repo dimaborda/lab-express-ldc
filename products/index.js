@@ -1,6 +1,6 @@
-const express = require('express');
-const  routes  = require('./src/routes/resources');
+const express = require('express')
 const app = express()
+const routes = require('./src/routes/resources.js');
 
 app.use(express.urlencoded({ extended: true })) //
 app.use(express.json({ limit: '16mb' })) // for 
