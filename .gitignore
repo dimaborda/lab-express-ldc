@@ -1,4 +1,4 @@
 */node_modules/
 ./*/environment
-*/package-lock.json
+
 ./mongo/*
