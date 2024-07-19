@@ -1,10 +1,7 @@
-const express = require('express')
-const app = express()
-const routes = require('./src/routes/resources.js');
+import app from './app.js'
+import _dbConnect from './src/connectors/mongo.js'
 
-app.use(express.urlencoded({ extended: true })) //
-app.use(express.json({ limit: '16mb' })) // for 
-
-app.use('/', routes);
-
-app.listen(3000)
+_dbConnect.then(() => {
+    console.log('MongoDB Connected');
+    app.listen(3000);
+});

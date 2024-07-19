@@ -1,15 +1,11 @@
-const express = require('express')
+import express from 'express';
+import profile_controller from '../controllers/profile_controller.js';
 const app = express()
 
-app.get('/profiles', function (req, res) {
-    let response = { message : "Welcome to profiles microservice  :XD" }
-    res.send({data: response})
-  })
-  
-  app.post('/profiles' , function (req, res, ) { 
-      const response = [ { name : "Admin", role :1  } , { name : "Guest", role : 2  } ];
-      res.status(200).send({data: response}) ;
-      
-  });
+app.route('/profiles')
+    .get(profile_controller.findAll)
+    .post(profile_controller.create)
+    .put(profile_controller.update)
+    .delete(profile_controller.delete);
 
-module.exports = app;
+export default  app;

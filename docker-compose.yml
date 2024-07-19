@@ -1,4 +1,4 @@
-version: '3.8'
+version: '3.3'
 
 services:
   profiles:
@@ -38,3 +38,15 @@ services:
       - profiles
       - users
       - products
+
+  mongo:
+    image: mongo
+    restart: always
+    container_name: mongo-test
+    ports:
+      - "27018:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: secret
+    volumes:
+      - ./mongo/data:/data/db
