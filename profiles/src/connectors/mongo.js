@@ -5,7 +5,7 @@ import  mongoose  from 'mongoose';
 let _ = {
     USER_MONGO : "root",
     PASSWORD_MONGO : "secret",
-    SERVER_MONGO : "mongo",
+    SERVER_MONGO : "mongo-test",
     PORT_MONGO : "27017",
     DATABASE_NAME_MONGO : "test-ldc-labs",
     PRODUCTION : false

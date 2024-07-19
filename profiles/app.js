@@ -7,6 +7,6 @@ const app = express()
 app.use(express.urlencoded({ extended: true })) //
 app.use(express.json({ limit: '16mb' })) // for 
 
-app.use('/resources', resources_routes);
+app.use('/profiles/resources', resources_routes);
 
 export default app;
