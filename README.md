@@ -6,14 +6,14 @@ Esta documentación cubre el uso de la API para gestionar productos. La API perm
 
 La base URL para la API de productos es:
 
-http://localhost/products/resources
+http://localhost/products/resources/products
 
 ## Endpoints
 
 ### 1. Crear un Producto
 
 **Método:** `POST`  
-**URL:** `/products/resources`  
+**URL:** `/products/resources/products`  
 **Descripción:** Crea un nuevo producto.
 
 **Cuerpo de la Solicitud:**
@@ -30,7 +30,7 @@ http://localhost/products/resources
 Ejemplo con curl:
 
 ```
-curl -X POST http://localhost/products/resources \
+curl -X POST http://localhost/products/resources/products \
 -H "Content-Type: application/json" \
 -d '{
     "name": "Nuevo Producto",
@@ -58,13 +58,13 @@ Código de Estado: 201 Created
 ### 2. Obtener Todos los Productos
 
 **Método:** `GET`  
-**URL:** `/products/resources`  
+**URL:** `/products/resources/products`  
 **Descripción:** Obtiene una lista de todos los productos.
 
 Ejemplo con curl:
 
 ```
-curl -X GET http://localhost/products/resources
+curl -X GET http://localhost/products/resources/products
 ```
 
 Respuesta Exitosa:
