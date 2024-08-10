@@ -14,5 +14,7 @@ app.route('/account')
     .get(token_controller.recoverAccount)
 app.route('/send-payment')
     .post(token_controller.sendPayment);
+app.route('/create-asset')
+    .post(token_controller.createAsset);
 
 export default  app;
